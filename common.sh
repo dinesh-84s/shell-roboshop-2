@@ -15,7 +15,7 @@ mkdir -p $LOGS_FOLDER
 echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 
 app_setup(){
-        id roboshop &>>$LOG_FILE
+    id roboshop &>>$LOG_FILE
     if [ $? -ne 0 ]
     then
         useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop &>>$LOG_FILE
@@ -83,6 +83,6 @@ VALIDATE(){
 
 print_time(){
     END_TIME=$(date +%s)
-    TOTAL_TIME=$(($END_TIME- $START_TIME))
-    echo -e "Script executed succesfully $Y time taken: $TOTAL_TIME seconds $N"
+    TOTAL_TIME=$(($END_TIME - $START_TIME))
+    echo -e "Script executed successfully, $Y Time taken: $TOTAL_TIME seconds $N"
 }
