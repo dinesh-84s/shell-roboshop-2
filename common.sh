@@ -71,6 +71,7 @@ python.setup(){
     cp $SCRIPT_DIR/payment.service /etc/systemd/system/payment.service &>>$LOG_FILE
     VALIDATE $? "Copying payment service"
 }
+
 systemd_setup(){
     cp $SCRIPT_DIR/$app_name.service /etc/systemd/system/$app_name.service
     VALIDATE $? "Copying $app_name service"
