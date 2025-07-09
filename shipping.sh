@@ -1,6 +1,6 @@
 #!/bin/bash
 
-souce ./common.sh
+source ./common.sh
 app_name=shipping
 
 check_root
